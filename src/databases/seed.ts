@@ -15,7 +15,7 @@ const mongooseDbOptions = {
     
   };
   mongoose
-    .connect('mongodb://localhost:27017/Batch193', mongooseDbOptions)
+    .connect('mongodb+srv://congle9103:W8E0VvfV6zy3DKq5@learn-nodejs.dfya3xs.mongodb.net/?retryWrites=true&w=majority&appName=learn-nodejs', mongooseDbOptions)
     .then(() => {
       console.log('Connected to MongoDB');
       //should listen app here

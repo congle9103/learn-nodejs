@@ -39,7 +39,7 @@ router.get('/products/home/:catId', productController.findHomeProducts);
 router.get('/products/category/:slug', productController.getProductsByCategorySlug);
 
 /** PRIVATE ROUTES */
-router.get('/products', authenticateToken, productController.findAll);
+router.get('/products', productController.findAll);
 router.get('/products/:id', authenticateToken, productController.findById);
 
 // POST /api/v1/products
