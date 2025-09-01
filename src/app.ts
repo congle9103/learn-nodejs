@@ -22,7 +22,7 @@ const app = express();
 //app.use(cors());
 //add learn-backend-node-js.vercel.app to cors
 app.use(cors({
-  origin: ['http://localhost:5173', 'https://learn-backend-node-js.vercel.app'],
+  origin: ['http://localhost:5173', 'https://backend-api-yt68.onrender.com/api/v1/categories'],
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization']
