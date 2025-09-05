@@ -7,7 +7,7 @@ const router = express.Router();
 router.get("/categories/tree", categoriesController.getCategoryTree);
 /** PRIVATE ROUTES */
 router.get("/categories", categoriesController.findAll);
-router.get("/categories/:id", authenticateToken, categoriesController.findById);
+router.get("/categories/:id", categoriesController.findById);
 router.post("/categories", authenticateToken, categoriesController.create);
 router.put("/categories/:id", authenticateToken, categoriesController.updateById);
 router.delete("/categories/:id", authenticateToken, categoriesController.deleteById);

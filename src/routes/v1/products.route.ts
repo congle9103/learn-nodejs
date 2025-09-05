@@ -40,10 +40,13 @@ router.get('/products/category/:slug', productController.getProductsByCategorySl
 
 /** PRIVATE ROUTES */
 router.get('/products', productController.findAll);
-router.get('/products/:id', authenticateToken, productController.findById);
+router.get('/products/:id', productController.findById);
 
 // POST /api/v1/products
-router.post('/products', authenticateToken, upload.single('file'), productController.create);
+//router.post('/products', authenticateToken, upload.single('file'), productController.create);
+
+// POST /api/v1/products
+router.post('/products', productController.create);
 
 // PUT /api/v1/products/:id
 router.put('/products/:id', authenticateToken, productController.updateById);
